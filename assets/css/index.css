@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: rgba(97, 130, 100, 1);
+    --secondary-color: rgba(121, 172, 120, 1);
+    --title-color: rgba(0, 14, 1, 1);
+    --text-color: rgba(0, 14, 1, 0.84);
+    --icon-color: rgba(121, 172, 120, 1);
+    --font-size: 10px;
+    --gradient: linear-gradient(10.82deg, rgba(0, 0, 0, 0.95) 1.55%, rgba(0, 0, 0, 0) 51.18%);
+    --font-family: "IBM Plex Sans Hebrew", sans-serif;
+    --neutral: #f7ffd5f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100vw;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+header>nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 8rem;
+    font-size: 1.8rem;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+header>nav>ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--title-color);
+}
+
+
+.nav-button>a {
+    padding: 1.5rem 4rem;
+    border-radius: 5rem;
+    color: var(--neutral);
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.nav-button>a:hover {
+    background-color: var(--secondary-color);
+    transition: all .3s ease-in-out;
+
+}
+
+header>nav>ul>li>a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    text-decoration-thickness: .2rem;
+    text-underline-offset: 1rem;
+    transition: all .3s ease-in-out;
+
+}
+
+.nav-resp {
+    display: none;
+    visibility: hidden;
+}
+
+.hero {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.hero_francis {
+    flex: 2;
+    background: linear-gradient(10.82deg, rgb(0, 0, 0) 1.55%, rgba(0, 0, 0, 0) 51.18%), url(../img/landing/francis.png) center/cover no-repeat;
+    border-radius: 2rem;
+    color: #fff;
+    position: relative;
+    margin: 1rem;
+
+}
+
+.hero_francis__text {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    border-left: 1rem solid var(--primary-color);
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.hero_francis__text>h1 {
+    font-size: 3rem;
+    width: 90%;
+}
+
+.hero_francis__text>p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.hero_articles {
+    color:  var(--text-color);
+    flex: 1;
+    
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.hero_articles_item  {
+    display: flex;
+    width: 90%;
+    gap: 0.5rem;
+
+}
+
+.article_image>img {
+    width: 15rem;
+    border-radius: 1rem;
+}
+
+
+
+.article_text>p{
+    font-size: 1.2rem;
+}
+
+
+.une {
+    border-left: solid var(--primary-color) 1rem;
+    padding: 1rem;
+    align-self: baseline;
+}
+
+.une>h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+
+
+
+    header>nav>ul,
+    .nav-button {
+        display: none;
+        visibility: hidden;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: 120%;
+    }
+
+    header>nav {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .nav-resp {
+        display: inline-block;
+        visibility: visible;
+        color: var(--primary-color);
+        padding-right: 1rem;
+    }
+
+    .hero_francis {
+        flex: 1.3;
+        border-radius: 0;
+    }
+
+    .hero_francis__text>h1 {
+        font-size: 1.7rem;
+        width: 90%;
+    }
+    
+    .hero_francis__text>p {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+    .hero_articles {
+        flex: 2;
+    }
+    .hero_francis__text {
+        bottom: 1rem;
+        left: 1rem;
+    }
+    .article_text>p{
+        font-size: 1rem;
+    }
+
+    .article_text>h1 {
+        font-size: 1.2rem;
+    }
+    .hero_articles_item  {
+        width: 100%;    
+    }
+}
+
+.announces{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding-left: 7rem;
+}
+.anounces1{
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: row; 
+    flex: 1;
+    padding: 3rem, 0rem ,3rem,.9rem;
+
+}
+.anounces_image>img{
+    height: 40vh;
+    width: 100%rem;
+    border-radius: 3rem;
+}
+#presidents{
+    height: 35rem;
+    width: 84%;
+    overflow: hidden;
+    position:relative;
+    object-fit:cover;
+}
+.announces_text>p{
+    color: #79AC78;
+    font-size: 1rem;
+}
+.announces_texte>h2{
+    font-size: 1.2rem;
+}
+.youtube-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.youtube{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.youtube>h2{
+font-size: 4.8rem;
+justify-content: center;
+align-self: center;
+}
+iframe{
+
+    justify-content: center;
+    align-self: center;
+    border-radius: 2rem;
+
+}
+
+/* Section Canal Matin: */
+.canal-matin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 2rem 6rem 2rem;
+
+}
+
+.canal-matin>h3{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: IBM Plex Sans Hebrew;
+}
+
+.canal-matin-main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 47rem;
+}
+.canal-matin-vid{
+    flex: 1;
+}
+
+.canal-matin-vid>iframe{
+    border-radius: 2rem;
+}
+
+.canal-matin-text{
+    flex: 1;
+    padding: 4rem;
+}
+
+.canal-matin-text>h2{
+    font-family: IBM Plex Sans Hebrew;
+    font-size: 3rem;
+}
+.canal-matin-text>p{
+    font-size: 2.4rem;
+}
+
+.ionicons>a>i{
+    margin: 2rem;
+}
+#instagram{
+    margin-left: 0rem;
+}
+
+/* FIN CANAL MATIN */
+
+/* Debut apres-canal-matin */
+
+#nous-chez-vous{
+    width: 34rem;
+    height: 35rem;
+}
+.nous-chez-vous>img{
+    border: solid #D9D9D9 .2rem;
+    justify-content: center;
+    align-self: center;
+    border-radius: 2rem;
+}
+
+#anounces_image{
+    border-color:#D9D9D9 ;
+    justify-content: center;
+    align-items: center;
+}
+/* Fin d'apres Canal */
+/* Debut de C'est comment */
+.c_est-comment{
+margin: 0 auto;
+}
+
+/* Fin de c'est comment */
+
+/* Debut de Espace publicité */
+
+.espace-publicite{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+.espace-publicite-txt{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.espace-publicite-txt>h1{
+    width: 8rem;
+    height: 58rem;
+    color: #79AC78;
+    font-family: IBM Plex Sans Hebrew;
+    display: flex;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 3rem;
+    justify-content: center;
+    align-content: center;
+    flex: 1rem;
+}
+.espace-publicite-txt>span{
+    color: #79AC78;
+}
+
+.espace-publicite>img{
+    flex: 3;
+    width: 139rem;
+    height: 58rem;
+}
+/* FIN ESPACE PUB */
+footer{
+    height: 40rem;
+    width: 100%;
+    background-color: #79AC78;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+footer>img{
+    width: 37rem;
+    height: 21rem;
+    flex: 1;
+}
+footer>ionicons{
+    flex: 1;
+}
