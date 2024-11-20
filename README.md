@@ -7,8 +7,7 @@ Refonte du site web de la chaine de télévision Camerounaise Canal 2 internatio
 
 ## Auteurs
 
-- [@Haruna Rashid](https://github.com/haruna-rashid-yakubu)
-
+- [@Dimitri Tedom alias SnowDev](https://github.com/DimitriTedom)
 ## Roadmap
 
 - Setup du projet
